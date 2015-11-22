@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E85A9B821C0149BF00D091E0 /* CoolGameIOSDK.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E85A9B811C0149BF00D091E0 /* CoolGameIOSDK.h */; };
+		E85A9B991C0151D600D091E0 /* CoolGame.m in Sources */ = {isa = PBXBuildFile; fileRef = E85A9B981C0151D600D091E0 /* CoolGame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +27,15 @@
 /* Begin PBXFileReference section */
 		E85A9B7E1C0149BF00D091E0 /* libCoolGameIOSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCoolGameIOSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E85A9B811C0149BF00D091E0 /* CoolGameIOSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoolGameIOSDK.h; sourceTree = "<group>"; };
+		E85A9B901C01506200D091E0 /* CoreKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreKit.h; sourceTree = "<group>"; };
+		E85A9B911C01507400D091E0 /* LogKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogKit.h; sourceTree = "<group>"; };
+		E85A9B921C01508000D091E0 /* LoginKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginKit.h; sourceTree = "<group>"; };
+		E85A9B931C01508F00D091E0 /* NetworkKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkKit.h; sourceTree = "<group>"; };
+		E85A9B941C01509900D091E0 /* PayKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PayKit.h; sourceTree = "<group>"; };
+		E85A9B951C0150A400D091E0 /* UtilsKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UtilsKit.h; sourceTree = "<group>"; };
+		E85A9B961C01511E00D091E0 /* CoolGameMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoolGameMacros.h; sourceTree = "<group>"; };
+		E85A9B971C0151D500D091E0 /* CoolGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoolGame.h; sourceTree = "<group>"; };
+		E85A9B981C0151D600D091E0 /* CoolGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoolGame.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +68,66 @@
 		E85A9B801C0149BF00D091E0 /* CoolGameIOSDK */ = {
 			isa = PBXGroup;
 			children = (
+				E85A9B8A1C01504100D091E0 /* Core */,
+				E85A9B8B1C01504100D091E0 /* Log */,
+				E85A9B8C1C01504100D091E0 /* Login */,
+				E85A9B8D1C01504100D091E0 /* Network */,
+				E85A9B8E1C01504100D091E0 /* Pay */,
+				E85A9B8F1C01504100D091E0 /* Utils */,
 				E85A9B811C0149BF00D091E0 /* CoolGameIOSDK.h */,
 			);
 			path = CoolGameIOSDK;
+			sourceTree = "<group>";
+		};
+		E85A9B8A1C01504100D091E0 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E85A9B901C01506200D091E0 /* CoreKit.h */,
+				E85A9B961C01511E00D091E0 /* CoolGameMacros.h */,
+				E85A9B971C0151D500D091E0 /* CoolGame.h */,
+				E85A9B981C0151D600D091E0 /* CoolGame.m */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		E85A9B8B1C01504100D091E0 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				E85A9B911C01507400D091E0 /* LogKit.h */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
+		E85A9B8C1C01504100D091E0 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E85A9B921C01508000D091E0 /* LoginKit.h */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		E85A9B8D1C01504100D091E0 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E85A9B931C01508F00D091E0 /* NetworkKit.h */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		E85A9B8E1C01504100D091E0 /* Pay */ = {
+			isa = PBXGroup;
+			children = (
+				E85A9B941C01509900D091E0 /* PayKit.h */,
+			);
+			path = Pay;
+			sourceTree = "<group>";
+		};
+		E85A9B8F1C01504100D091E0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E85A9B951C0150A400D091E0 /* UtilsKit.h */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +186,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E85A9B991C0151D600D091E0 /* CoolGame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

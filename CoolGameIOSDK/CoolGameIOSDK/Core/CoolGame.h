@@ -1,5 +1,5 @@
 //
-//  CoolGameIOSDK.h
+//  CoolGame.h
 //  CoolGameIOSDK
 //
 //  Created by LinKunxin on 15/11/22.
@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-#import <CoolGameIOSDK/Core/CoreKit.h>
+@interface CoolGame : NSObject
 
-@interface CoolGameIOSDK : NSObject
++(void) init;
 
 @end
