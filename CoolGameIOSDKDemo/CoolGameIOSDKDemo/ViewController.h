@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import <CoolGameIOSDK/CoolGame.h>
-#import <CoolGameIOSDK/CoolGameDelegate.h>
 
 @interface ViewController : UIViewController<CoolGameDelegate>
 

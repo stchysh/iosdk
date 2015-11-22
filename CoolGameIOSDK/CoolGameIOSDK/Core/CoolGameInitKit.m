@@ -17,7 +17,6 @@
         [self startInit];
     }];
     
-    
 }
 
 -(void)startInit {
