@@ -12,11 +12,14 @@
 
 #pragma sdk macros
 
-#define SDK_NAME "CoolGame IOS SDK"
-#define SDK_AUCHOR "yanschen"
-#define SDK_VERSION "1.0.0"
+#define SDK_NAME @"CoolGame IOS SDK"
+#define SDK_AUCHOR @"yanschen"
+#define SDK_VERSION @"1.0.0"
 
-
+#pragma log macros
+#define LOG_DEFAULT_TAG @"CoolGame"
+#define LOG_INIT_TAG @"CoolGameInit"
+#define LOG_CONFIG_TAG @"CoolGameConfig"
 
 
 #endif /* CoolGameMacros_h */

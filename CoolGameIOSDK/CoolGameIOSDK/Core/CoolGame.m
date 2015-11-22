@@ -7,10 +7,25 @@
 //
 
 #import "CoolGame.h"
+#import <Kits.h>
 
 @implementation CoolGame
 
-+(void) init {
+//static id<CoolGameDelegate> _delegate;
+
++(void) init:(id<CoolGameDelegate>)delegate setAppId:(NSString*) appId setAppKey:(NSString*) appKey {
+    [CoolGameLog log:@"coolgame sdk initing"];
+//    _delegate = delegate;
+    CoolGameInitKit *initKit = [CoolGameInitKit new];
+    [initKit setup:delegate setAppId:appId setAppKey:appKey];
+}
+
++(void) setConfig:(BOOL)debug setIsShowLog:(BOOL)isShowLog {
+    
+    [CoolGameLog setIsShowLog:isShowLog];
+}
+
++(void) setViewContainer:(UIView *)container {
     
 }
 

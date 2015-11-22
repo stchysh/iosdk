@@ -9,7 +9,11 @@
 #ifndef CoreKit_h
 #define CoreKit_h
 
-#import <CoolGameIOSDK/Core/CoolGameMacros.h>
+//$(SRCROOT)/CoolGameIOSDK/Core
+
+#import <Core/CoolGameMacros.h>
+#import <Core/CoolGameConfig.h>
+#import <Core/CoolGameInitKit.h>
 
 
 #endif /* CoreKit_h */

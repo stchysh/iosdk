@@ -9,5 +9,6 @@
 #ifndef LogKit_h
 #define LogKit_h
 
+#import <Log/CoolGameLog.h>
 
 #endif /* LogKit_h */
