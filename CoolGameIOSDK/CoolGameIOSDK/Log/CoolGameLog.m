@@ -33,6 +33,9 @@ static bool _isShowLog = false;
     [self log:LOG_CONFIG_TAG message:msg];
 }
 
++(void)logLogin:(NSString*)msg {
+    [self log:LOG_LOGIN_TAG message:msg];
+}
 
 +(void) log:(NSString *)tag message:(NSString *)msg {
     if([self isShowLog]) {

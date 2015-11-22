@@ -14,7 +14,13 @@
 @protocol CoolGameDelegate<NSObject>
 
 @required
+
+//init callback
 -(void) initSuccess;
+
+//login callback
+-(void) loginSuccess;
+
 
 @end
 

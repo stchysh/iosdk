@@ -20,6 +20,13 @@
     [CoolGame init:self setAppId:@"10001" setAppKey:@"ABCDEFGHIJKLMN"];
     
 }
+- (IBAction)btnLoginHandler:(id)sender {
+    [CoolGame login];
+}
+
+-(void) loginSuccess {
+    NSLog(@"#login success");
+}
 
 -(void) initSuccess {
     NSLog(@"#initSuccess");

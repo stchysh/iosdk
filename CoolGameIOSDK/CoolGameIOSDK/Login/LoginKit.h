@@ -9,5 +9,6 @@
 #ifndef LoginKit_h
 #define LoginKit_h
 
+#import <Login/CoolGameLoginKit.h>
 
 #endif /* LoginKit_h */

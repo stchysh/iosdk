@@ -11,6 +11,7 @@
 
 #import <Core/CoreKit.h>
 #import <Log/LogKit.h>
+#import <Login/LoginKit.h>
 
 @class CoolGameConfig;
 

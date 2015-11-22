@@ -17,8 +17,10 @@
 +(void) setIsShowLog:(BOOL) isShowLog;
 +(void)log:(NSString*)tag message:(NSString*)msg;
 +(void)log:(NSString*)msg;
+
+
 +(void)logInit:(NSString*)msg;
 +(void)logConfig:(NSString*)msg;
-
++(void)logLogin:(NSString*)msg;
 
 @end

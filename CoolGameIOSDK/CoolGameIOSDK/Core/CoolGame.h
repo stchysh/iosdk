@@ -12,9 +12,16 @@
 
 @interface CoolGame : NSObject
 
+#pragma init
 
 +(void) init:(id<CoolGameDelegate>)delegate setAppId:(NSString*) appId setAppKey:(NSString*) appKey;
 +(void) setConfig:(BOOL)debug setIsShowLog:(BOOL)isShowLog;
 +(void) setViewContainer:(UIView *)container;
+
+#pragma login
+//start login in gamecenter
++(void) login;
+//+(void) logout;
+//+(void) userCenter;
 
 @end

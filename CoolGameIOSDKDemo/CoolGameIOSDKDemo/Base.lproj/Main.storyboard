@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,10 +17,41 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OU3-tS-P7m">
+                                <rect key="frame" x="252" y="194" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzC-Wg-uaA">
+                                <rect key="frame" x="272" y="232" width="46" height="30"/>
+                                <state key="normal" title="登录"/>
+                                <connections>
+                                    <action selector="btnLoginHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rds-Ja-hMO"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ut4-dc-HJg">
+                                <rect key="frame" x="252" y="156" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="txt_userName:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="0im-r8-qBq"/>
+                                </connections>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="OU3-tS-P7m" secondAttribute="trailing" id="QZa-rB-fdt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hzC-Wg-uaA" secondAttribute="trailing" id="b9V-qJ-x10"/>
+                            <constraint firstItem="OU3-tS-P7m" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="gwX-EX-8QW"/>
+                            <constraint firstItem="ut4-dc-HJg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="kC9-Qp-wkX"/>
+                            <constraint firstItem="ut4-dc-HJg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="136" id="qLs-6E-bpL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ut4-dc-HJg" secondAttribute="trailing" id="yEE-tv-TST"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="_viewContainer" destination="8bC-Xf-vdC" id="cmG-KI-urI"/>
+                        <outlet property="txt_userName" destination="ut4-dc-HJg" id="JHh-6U-n8K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

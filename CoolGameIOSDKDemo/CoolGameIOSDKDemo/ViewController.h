@@ -12,6 +12,7 @@
 @interface ViewController : UIViewController<CoolGameDelegate>
 
 @property (strong, nonatomic) IBOutlet UIView *_viewContainer;
+@property (weak, nonatomic) IBOutlet UITextField *txt_userName;
 
 @end
 
