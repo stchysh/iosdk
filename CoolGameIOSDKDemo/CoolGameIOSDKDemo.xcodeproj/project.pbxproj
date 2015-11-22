@@ -31,6 +31,13 @@
 			remoteGlobalIDString = E85A9B7D1C0149BF00D091E0;
 			remoteInfo = CoolGameIOSDK;
 		};
+		E8C0BDBD1C021BA900BCE220 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E85A9BC31C0152CF00D091E0 /* CoolGameIOSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E8C0BDAB1C018EC700BCE220;
+			remoteInfo = CoolGameIOSDKResources;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				E85A9BC81C0152CF00D091E0 /* libCoolGameIOSDK.a */,
+				E8C0BDBE1C021BA900BCE220 /* CoolGameIOSDK.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,6 +148,7 @@
 				TargetAttributes = {
 					E85A9BA21C01528F00D091E0 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = W54UPLZLQ8;
 					};
 				};
 			};
@@ -173,6 +182,13 @@
 			fileType = archive.ar;
 			path = libCoolGameIOSDK.a;
 			remoteRef = E85A9BC71C0152CF00D091E0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E8C0BDBE1C021BA900BCE220 /* CoolGameIOSDK.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CoolGameIOSDK.bundle;
+			remoteRef = E8C0BDBD1C021BA900BCE220 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -317,10 +333,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kunxin Lin (86635LURN7)";
 				INFOPLIST_FILE = CoolGameIOSDKDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = kuyou.CoolGameIOSDKDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kuyou.CoolGameIOSDKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "c7b0c96d-3f73-43cb-9e6e-9fe38423ec56";
 			};
 			name = Debug;
 		};
@@ -328,9 +347,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = CoolGameIOSDKDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = kuyou.CoolGameIOSDKDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kuyou.CoolGameIOSDKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
