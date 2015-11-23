@@ -16,10 +16,10 @@
 @required
 
 //init callback
--(void) initSuccess;
+-(void) initSuccess:(BOOL)result;
 
 //login callback
--(void) loginSuccess;
+-(void) loginSuccess:(BOOL)result alias:(NSString*)alias playerId:(NSString*)playerId displayName:(NSString*)displayName;
 
 
 @end

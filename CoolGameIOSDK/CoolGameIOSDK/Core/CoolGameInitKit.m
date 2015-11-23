@@ -37,7 +37,7 @@
 -(void)initSuccess {
     [CoolGameLog logInit:@"CoolGameInitKit inited."];
     
-    [self._delegate initSuccess];
+    [self._delegate initSuccess:YES];
 }
 
 

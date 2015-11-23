@@ -14,7 +14,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [CoolGame setViewContainer:self._viewContainer];
+//    [CoolGame setViewContainer:self._viewContainer];
+    [CoolGame setViewController:self];
     [CoolGame setConfig:YES setIsShowLog:YES];
     
     [CoolGame init:self setAppId:@"10001" setAppKey:@"ABCDEFGHIJKLMN"];
@@ -22,14 +23,15 @@
 }
 - (IBAction)btnLoginHandler:(id)sender {
     [CoolGame login];
+    
 }
 
--(void) loginSuccess {
-    NSLog(@"#login success");
+-(void) initSuccess:(BOOL)result {
+    NSLog(@"#initSuccess, %d", result);
 }
 
--(void) initSuccess {
-    NSLog(@"#initSuccess");
+-(void) loginSuccess:(BOOL)result alias:(NSString*)alias playerId:(NSString*)playerId displayName:(NSString*)displayName {
+    NSLog(@"#login success:%d, alias:%@, playerId:%@, displayName:%@", result, alias, playerId, displayName);
 }
 
 - (void)didReceiveMemoryWarning {

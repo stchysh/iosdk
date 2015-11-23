@@ -14,6 +14,7 @@
 @implementation Kits
 
 static CoolGameConfig * _config;
+static CoolGameAlertKit * _alert;
 
 +(CoolGameConfig*) config {
     if(!_config) {
@@ -21,6 +22,14 @@ static CoolGameConfig * _config;
     }
     return _config;
 }
+
++(CoolGameAlertKit*) alert {
+    if(!_alert) {
+        _alert = [CoolGameAlertKit new];
+    }
+    return _alert;
+}
+
 
 +(void)assert:(BOOL)val message:(NSString*)msg {
     if(!val) {

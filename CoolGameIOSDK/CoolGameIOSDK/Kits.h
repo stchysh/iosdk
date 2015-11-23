@@ -9,18 +9,22 @@
 #ifndef Kits_h
 #define Kits_h
 
+#import <UIKit/UIKit.h>
 #import <Core/CoreKit.h>
 #import <Log/LogKit.h>
 #import <Login/LoginKit.h>
+#import <Utils/UtilsKit.h>
 
-@class CoolGameConfig;
+@class CoolGameConfig, CoolGameAlertKit;
 
 @interface Kits : NSObject
 
 +(CoolGameConfig*) config;
++(CoolGameAlertKit*) alert;
 
 
 +(void)assert:(BOOL)val message:(NSString*)msg;
+
 
 @end
 

@@ -17,6 +17,7 @@
 +(void) init:(id<CoolGameDelegate>)delegate setAppId:(NSString*) appId setAppKey:(NSString*) appKey;
 +(void) setConfig:(BOOL)debug setIsShowLog:(BOOL)isShowLog;
 +(void) setViewContainer:(UIView *)container;
++(void) setViewController:(UIViewController *)viewController;
 
 #pragma login
 //start login in gamecenter

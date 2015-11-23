@@ -12,6 +12,7 @@
 @implementation CoolGame
 
 static id<CoolGameDelegate> _delegate;
+static UIViewController * _viewController;
 
 #pragma config -----------------------------------------
 
@@ -21,7 +22,12 @@ static id<CoolGameDelegate> _delegate;
 }
 
 +(void) setViewContainer:(UIView *)container {
-    
+
+}
+
++(void) setViewController:(UIViewController *)viewController {
+    _viewController = viewController;
+    [[Kits alert] setup:_viewController];
 }
 
 #pragma init -----------------------------------------

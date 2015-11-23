@@ -17,6 +17,6 @@
 -(void)setup:(id<CoolGameDelegate>)delegate setAppId:(NSString*)appId setAppKey:(NSString*)appKey;
 -(void)startInit;
 -(void)checkUpdate;
--(void)initSuccess;
+-(void)initSuccess:(BOOL)result;
 
 @end

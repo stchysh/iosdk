@@ -9,5 +9,6 @@
 #ifndef UtilsKit_h
 #define UtilsKit_h
 
+#import <Utils/CoolGameAlertKit.h>
 
 #endif /* UtilsKit_h */
