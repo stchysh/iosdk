@@ -14,8 +14,9 @@
 #import <Log/LogKit.h>
 #import <Login/LoginKit.h>
 #import <Utils/UtilsKit.h>
+#import <Network/NetworkKit.h>
 
-@class CoolGameConfig, CoolGameAlertKit;
+@class CoolGameConfig, CoolGameAlertKit, HttpSyncKit;
 
 @interface Kits : NSObject
 
@@ -24,7 +25,7 @@
 
 
 +(void)assert:(BOOL)val message:(NSString*)msg;
-
++(void)getSync:(NSString*)urlPath completionHandler:(void (^)(NSString*))handler;
 
 @end
 

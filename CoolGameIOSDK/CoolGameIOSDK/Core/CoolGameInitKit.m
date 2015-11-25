@@ -19,6 +19,10 @@
         [self checkUpdate];
     }];
     
+    
+    [Kits getSync:@"http://www.baidu.com" completionHandler:^(NSString * str) {
+        NSLog(@"%@", str);
+    }];
 }
 
 //检测更新

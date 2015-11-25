@@ -37,4 +37,8 @@ static CoolGameAlertKit * _alert;
     }
 }
 
++(void)getSync:(NSString *)urlPath completionHandler:(void (^)(NSString *))handler {
+    [[HttpSyncKit new] get:urlPath completionHandler:handler];
+}
+
 @end

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E8C0BDAA1C018EC700BCE220"
-               BuildableName = "CoolGameIOSDKResources.bundle"
+               BuildableName = "CoolGameIOSDK.bundle"
                BlueprintName = "CoolGameIOSDKResources"
                ReferencedContainer = "container:CoolGameIOSDK.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E8C0BDAA1C018EC700BCE220"
-            BuildableName = "CoolGameIOSDKResources.bundle"
+            BuildableName = "CoolGameIOSDK.bundle"
             BlueprintName = "CoolGameIOSDKResources"
             ReferencedContainer = "container:CoolGameIOSDK.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E8C0BDAA1C018EC700BCE220"
-            BuildableName = "CoolGameIOSDKResources.bundle"
+            BuildableName = "CoolGameIOSDK.bundle"
             BlueprintName = "CoolGameIOSDKResources"
             ReferencedContainer = "container:CoolGameIOSDK.xcodeproj">
          </BuildableReference>
