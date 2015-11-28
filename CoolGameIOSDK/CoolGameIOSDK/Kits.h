@@ -25,7 +25,13 @@
 
 
 +(void)assert:(BOOL)val message:(NSString*)msg;
-+(void)getSync:(NSString*)urlPath completionHandler:(void (^)(NSString*))handler;
++(void)get:(NSString*)urlPath completionHandler:(void (^)(NSString*))handler;
++(void)post:(NSString*)urlPath sendData:(NSData*)data completionHandler:(void (^)(NSString*))handler;
++(void)setUIViewController:(UIViewController*)viewController;
+
++(void)showLoading:(NSString*)text;
++(void)showLoading;
++(void)hideLoading;
 
 @end
 

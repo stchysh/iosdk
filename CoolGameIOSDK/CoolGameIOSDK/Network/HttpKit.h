@@ -1,16 +1,26 @@
 //
-//  HttpSyncKit.h
+//  HttpKit.h
 //  CoolGameIOSDK
 //
-//  Created by LinKunxin on 15/11/23.
+//  Created by LinKunxin on 15/11/28.
 //  Copyright © 2015年 kuyou. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface HttpSyncKit : NSObject
+#define HTTPKIT_GET @"GET"
+#define HTTPKIT_POST @"POST"
+#define HTTPKIT_DATA @"HTTPKIT_DATA"
+
+#define HTTPKIT_TIMEOUT @"HTTPKIT_TIMEOUT"
+#define HTTPKIT_CACHEPOLICY @"HTTPKIT_CACHEPOLICY"
+#define HTTPKIT_TRYCOUNT @"HTTPKIT_TRYCOUNT"
+
+@interface HttpKit : NSObject
+
 
 @property int tryCount;
+@property NSURLSessionDataTask * _task;
 
 //NSURLRequest初始化方法第一个参数：请求访问路径，第二个参数：缓存协议，第三个参数：网络请求超时时间（秒）
 //    其中缓存协议是个枚举类型包含：
@@ -23,9 +33,18 @@
 //第三步，连接服务器
 //    NSData *received = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
 
--(void)get:(NSString*)urlPath completionHandler:(void (^)(NSString*))handler;
--(void)get:(NSString*)urlPath completionHandler:(void (^)(NSString*))handler setTimeout:(NSTimeInterval)timeout;
--(void)get:(NSString*)urlPath completionHandler:(void (^)(NSString*))handler setTimeout:(NSTimeInterval)timeout setCachePolicy:(NSInteger)cachePolicy;
+-(void)setTryCounts:(int)tryCount;
 
+-(void)get:(NSString*)urlPath;
+-(void)get:(NSString*)urlPath setParams:(NSDictionary*)params;
+-(void)get:(NSString*)urlPath completionHandler:(void (^)(NSString*))handler;
+-(void)get:(NSString*)urlPath completionHandler:(void (^)(NSString*))handler setParams:(NSDictionary*)params;
+
+-(void)post:(NSString*)urlPath;
+-(void)post:(NSString*)urlPath setParams:(NSDictionary*)params;
+-(void)post:(NSString*)urlPath completionHandler:(void (^)(NSString*))handler;
+-(void)post:(NSString*)urlPath completionHandler:(void (^)(NSString*))handler setParams:(NSDictionary*)params;
+
+-(void)http:(NSString*)urlPath completionHandler:(void (^)(NSString*))handler setHttpMethod:(NSString*)httpMethod setParams:(NSDictionary*)params;
 
 @end

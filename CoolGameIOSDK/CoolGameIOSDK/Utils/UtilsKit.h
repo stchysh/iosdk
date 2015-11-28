@@ -10,5 +10,6 @@
 #define UtilsKit_h
 
 #import <Utils/CoolGameAlertKit.h>
+#import <Utils/LoadingViewKit.h>
 
 #endif /* UtilsKit_h */

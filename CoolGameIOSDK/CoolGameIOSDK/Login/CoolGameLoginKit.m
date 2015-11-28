@@ -11,6 +11,7 @@
 @implementation CoolGameLoginKit
 
 -(void) setup:(id<CoolGameDelegate>)delegate {
+    [Kits showLoading:@"Logining..."];
     [CoolGameLog logLogin:@"CoolGameLoginKit setup"];
     self._delegate = delegate;
 
@@ -19,11 +20,13 @@
 //        [self loginSuccess];
     }
     else {
+        [Kits hideLoading];
         [[Kits alert] alert:@"GameCenter isn't supported!"];
     }
 }
 
 -(void) loginSuccess:(BOOL)result alias:(NSString*)alias playerId:(NSString*)playerId displayName:(NSString*)displayName {
+    [Kits hideLoading];
     [CoolGameLog logLogin:@"CoolGameLoginKit loginSuccess"];
     [self._delegate loginSuccess:result alias:alias playerId:playerId displayName:displayName];
 }
@@ -39,43 +42,47 @@
 
 -(void) loginGameCenter {
     __weak GKLocalPlayer *localPlayer = [GKLocalPlayer localPlayer];
-    localPlayer.authenticateHandler = ^(UIViewController *viewController, NSError *error)
-    {
-        if(viewController)
+    if(localPlayer.isAuthenticated) {
+        [self loginSuccess:YES alias:localPlayer.alias playerId:localPlayer.playerID displayName:localPlayer.displayName];
+    }
+    else {
+        localPlayer.authenticateHandler = ^(UIViewController *viewController, NSError *error)
         {
-            [[[UIApplication sharedApplication] keyWindow].rootViewController presentViewController:viewController animated:YES completion:nil];
-        }
-        else if(localPlayer.isAuthenticated == YES)
-        {
-            [CoolGameLog logLogin:@"gamecenter login success."];
-            [CoolGameLog logLogin:[NSString stringWithFormat:@"alias:%@", localPlayer.alias]];
-            [CoolGameLog logLogin:[NSString stringWithFormat:@"authenticated:%d", localPlayer.authenticated]];
-            [CoolGameLog logLogin:[NSString stringWithFormat:@"playerID:%@", localPlayer.playerID]];
-            [CoolGameLog logLogin:[NSString stringWithFormat:@"displayName:%@", localPlayer.displayName]];
-            [CoolGameLog logLogin:[NSString stringWithFormat:@"description:%@", localPlayer.description]];
-            [CoolGameLog logLogin:[NSString stringWithFormat:@"debugDescription:%@", localPlayer.debugDescription]];
-            
-            [CoolGameLog logLogin:[NSString stringWithFormat:@"underage:%d", localPlayer.underage]];
-            [self loginSuccess:YES alias:localPlayer.alias playerId:localPlayer.playerID displayName:localPlayer.displayName];
-
-//            [localPlayer generateIdentityVerificationSignatureWithCompletionHandler:^(NSURL *publicKeyUrl, NSData *signature, NSData *salt, uint64_t timestamp, NSError *error) {
-//                
-//                if(error != nil)
-//                {
-//                    return; //some sort of error, can't authenticate right now
-//                }
-//                //                [self verifyPlayer:localPlayer.playerID publicKeyUrl:publicKeyUrl signature:signature salt:salt timestamp:timestamp];
-//                
-//                
-//            }];
-        }
-        else
-        {
-            [CoolGameLog logLogin:@"gamecenter login failed."];
-            [self loginSuccess:NO alias:nil playerId:nil displayName:nil];
-        }
-    };
-    
+            if(viewController)
+            {
+                [[[UIApplication sharedApplication] keyWindow].rootViewController presentViewController:viewController animated:YES completion:nil];
+            }
+            else if(localPlayer.isAuthenticated == YES)
+            {
+                [CoolGameLog logLogin:@"gamecenter login success."];
+                [CoolGameLog logLogin:[NSString stringWithFormat:@"alias:%@", localPlayer.alias]];
+                [CoolGameLog logLogin:[NSString stringWithFormat:@"authenticated:%d", localPlayer.authenticated]];
+                [CoolGameLog logLogin:[NSString stringWithFormat:@"playerID:%@", localPlayer.playerID]];
+                [CoolGameLog logLogin:[NSString stringWithFormat:@"displayName:%@", localPlayer.displayName]];
+                [CoolGameLog logLogin:[NSString stringWithFormat:@"description:%@", localPlayer.description]];
+                [CoolGameLog logLogin:[NSString stringWithFormat:@"debugDescription:%@", localPlayer.debugDescription]];
+                
+                [CoolGameLog logLogin:[NSString stringWithFormat:@"underage:%d", localPlayer.underage]];
+                [self loginSuccess:YES alias:localPlayer.alias playerId:localPlayer.playerID displayName:localPlayer.displayName];
+                
+                //            [localPlayer generateIdentityVerificationSignatureWithCompletionHandler:^(NSURL *publicKeyUrl, NSData *signature, NSData *salt, uint64_t timestamp, NSError *error) {
+                //
+                //                if(error != nil)
+                //                {
+                //                    return; //some sort of error, can't authenticate right now
+                //                }
+                //                //                [self verifyPlayer:localPlayer.playerID publicKeyUrl:publicKeyUrl signature:signature salt:salt timestamp:timestamp];
+                //
+                //
+                //            }];
+            }
+            else
+            {
+                [CoolGameLog logLogin:@"gamecenter login failed."];
+                [self loginSuccess:NO alias:nil playerId:nil displayName:nil];
+            }
+        };
+    }
 
 }
 

@@ -27,6 +27,7 @@ static UIViewController * _viewController;
 
 +(void) setViewController:(UIViewController *)viewController {
     [Kits assert:(viewController!=nil) message:@"viewController cannot be nil."];
+    [Kits setUIViewController:viewController];
     _viewController = viewController;
     [[Kits alert] setup:_viewController];
 }

@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 
-
 @implementation ViewController
 
 - (void)viewDidLoad {
@@ -23,6 +22,19 @@
 }
 - (IBAction)btnLoginHandler:(id)sender {
     [CoolGame login];
+//    
+//    self.myAlert = [[UIAlertView alloc] initWithTitle:nil
+//                                         message: @"读取中..."
+//                                        delegate: self
+//                               cancelButtonTitle: nil
+//                               otherButtonTitles: nil];
+//    
+//    self.activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+//    self.activityView.frame = CGRectMake(120.f, 48.0f, 38.0f, 38.0f);
+//    [self.myAlert addSubview:self.activityView];
+//    [self.activityView startAnimating];
+//    [self.myAlert show];
+
     
 }
 
@@ -31,7 +43,11 @@
 }
 
 -(void) loginSuccess:(BOOL)result alias:(NSString*)alias playerId:(NSString*)playerId displayName:(NSString*)displayName {
+    NSString * name = [NSString stringWithFormat:@"%@, %@", alias, displayName];
+    self.txt_userName.text = name;
+    self.txtpwd.text = playerId;
     NSLog(@"#login success:%d, alias:%@, playerId:%@, displayName:%@", result, alias, playerId, displayName);
+    [self.myAlert dismissWithClickedButtonIndex:0 animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -15,6 +15,11 @@
 
 static CoolGameConfig * _config;
 static CoolGameAlertKit * _alert;
+static UIViewController * _viewController;
+
++(void)setUIViewController:(UIViewController*)viewController {
+    _viewController = viewController;
+}
 
 +(CoolGameConfig*) config {
     if(!_config) {
@@ -30,15 +35,33 @@ static CoolGameAlertKit * _alert;
     return _alert;
 }
 
-
+#pragma assert
 +(void)assert:(BOOL)val message:(NSString*)msg {
     if(!val) {
         @throw [NSException exceptionWithName:SDK_NAME reason:msg userInfo:nil];
     }
 }
 
-+(void)getSync:(NSString *)urlPath completionHandler:(void (^)(NSString *))handler {
-    [[HttpSyncKit new] get:urlPath completionHandler:handler];
+
+
+#pragma  http
++(void)get:(NSString *)urlPath completionHandler:(void (^)(NSString *))handler {
+    [[HttpKit new] get:urlPath completionHandler:handler];
 }
++(void)post:(NSString*)urlPath sendData:(NSData*)data completionHandler:(void (^)(NSString*))handler {
+    [[HttpKit new] post:urlPath completionHandler:handler setParams:@{ HTTPKIT_DATA : data }];
+}
+
+#pragma loading view
++(void)showLoading {
+    [LoadingViewKit showLoading:_viewController.view];
+}
++(void)showLoading:(NSString*)text {
+    [LoadingViewKit showLoading:_viewController.view withText:text];
+}
++(void)hideLoading {
+    [LoadingViewKit hideLoading:_viewController.view];
+}
+
 
 @end

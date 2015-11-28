@@ -40,6 +40,13 @@
 			remoteGlobalIDString = E8C0BDAB1C018EC700BCE220;
 			remoteInfo = CoolGameIOSDKResources;
 		};
+		E8C0BEA11C09614F00BCE220 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E85A9BC31C0152CF00D091E0 /* CoolGameIOSDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E8C0BDA01C018ADF00BCE220;
+			remoteInfo = Framework;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -138,6 +145,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				E8C0BEA21C09614F00BCE220 /* PBXTargetDependency */,
 				E85A9BDD1C0162FF00D091E0 /* PBXTargetDependency */,
 			);
 			name = CoolGameIOSDKDemo;
@@ -232,6 +240,11 @@
 			isa = PBXTargetDependency;
 			name = CoolGameIOSDK;
 			targetProxy = E85A9BDC1C0162FF00D091E0 /* PBXContainerItemProxy */;
+		};
+		E8C0BEA21C09614F00BCE220 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Framework;
+			targetProxy = E8C0BEA11C09614F00BCE220 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

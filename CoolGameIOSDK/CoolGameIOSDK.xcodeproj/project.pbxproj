@@ -42,10 +42,10 @@
 		E8C0BDC41C02AB7F00BCE220 /* CoolGameAlertKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E8C0BDC21C02AB7F00BCE220 /* CoolGameAlertKit.h */; };
 		E8C0BDC51C02AB7F00BCE220 /* CoolGameAlertKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C0BDC31C02AB7F00BCE220 /* CoolGameAlertKit.m */; };
 		E8C0BDC71C02B8EC00BCE220 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8C0BDC61C02B8EC00BCE220 /* GameKit.framework */; };
-		E8C0BDD51C030C0B00BCE220 /* HttpSyncKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E8C0BDD31C030C0B00BCE220 /* HttpSyncKit.h */; };
-		E8C0BDD61C030C0B00BCE220 /* HttpSyncKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C0BDD41C030C0B00BCE220 /* HttpSyncKit.m */; };
-		E8C0BDD91C030C2000BCE220 /* HttpAsynKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E8C0BDD71C030C2000BCE220 /* HttpAsynKit.h */; };
-		E8C0BDDA1C030C2000BCE220 /* HttpAsynKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C0BDD81C030C2000BCE220 /* HttpAsynKit.m */; };
+		E8C0BE9F1C0943A900BCE220 /* HttpKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E8C0BE9D1C0943A900BCE220 /* HttpKit.h */; };
+		E8C0BEA01C0943AA00BCE220 /* HttpKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C0BE9E1C0943A900BCE220 /* HttpKit.m */; };
+		E8C0BEA71C09ABBA00BCE220 /* LoadingViewKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E8C0BEA51C09ABBA00BCE220 /* LoadingViewKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E8C0BEA81C09ABBA00BCE220 /* LoadingViewKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C0BEA61C09ABBA00BCE220 /* LoadingViewKit.m */; };
 		E8F1FC511C01747900BD5BE3 /* CoolGameInitKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E8F1FC4F1C01747900BD5BE3 /* CoolGameInitKit.h */; };
 		E8F1FC521C01747900BD5BE3 /* CoolGameInitKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F1FC501C01747900BD5BE3 /* CoolGameInitKit.m */; };
 		E8F1FC551C017C9A00BD5BE3 /* Kits.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F1FC541C017C9A00BD5BE3 /* Kits.m */; };
@@ -106,10 +106,10 @@
 		E8C0BDC21C02AB7F00BCE220 /* CoolGameAlertKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoolGameAlertKit.h; sourceTree = "<group>"; };
 		E8C0BDC31C02AB7F00BCE220 /* CoolGameAlertKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoolGameAlertKit.m; sourceTree = "<group>"; };
 		E8C0BDC61C02B8EC00BCE220 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
-		E8C0BDD31C030C0B00BCE220 /* HttpSyncKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpSyncKit.h; sourceTree = "<group>"; };
-		E8C0BDD41C030C0B00BCE220 /* HttpSyncKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpSyncKit.m; sourceTree = "<group>"; };
-		E8C0BDD71C030C2000BCE220 /* HttpAsynKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpAsynKit.h; sourceTree = "<group>"; };
-		E8C0BDD81C030C2000BCE220 /* HttpAsynKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpAsynKit.m; sourceTree = "<group>"; };
+		E8C0BE9D1C0943A900BCE220 /* HttpKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpKit.h; sourceTree = "<group>"; };
+		E8C0BE9E1C0943A900BCE220 /* HttpKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpKit.m; sourceTree = "<group>"; };
+		E8C0BEA51C09ABBA00BCE220 /* LoadingViewKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingViewKit.h; sourceTree = "<group>"; };
+		E8C0BEA61C09ABBA00BCE220 /* LoadingViewKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingViewKit.m; sourceTree = "<group>"; };
 		E8F1FC4F1C01747900BD5BE3 /* CoolGameInitKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoolGameInitKit.h; sourceTree = "<group>"; };
 		E8F1FC501C01747900BD5BE3 /* CoolGameInitKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoolGameInitKit.m; sourceTree = "<group>"; };
 		E8F1FC531C01796000BD5BE3 /* Kits.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Kits.h; sourceTree = "<group>"; };
@@ -215,10 +215,8 @@
 			isa = PBXGroup;
 			children = (
 				E85A9B931C01508F00D091E0 /* NetworkKit.h */,
-				E8C0BDD31C030C0B00BCE220 /* HttpSyncKit.h */,
-				E8C0BDD41C030C0B00BCE220 /* HttpSyncKit.m */,
-				E8C0BDD71C030C2000BCE220 /* HttpAsynKit.h */,
-				E8C0BDD81C030C2000BCE220 /* HttpAsynKit.m */,
+				E8C0BE9D1C0943A900BCE220 /* HttpKit.h */,
+				E8C0BE9E1C0943A900BCE220 /* HttpKit.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -237,6 +235,8 @@
 				E85A9B951C0150A400D091E0 /* UtilsKit.h */,
 				E8C0BDC21C02AB7F00BCE220 /* CoolGameAlertKit.h */,
 				E8C0BDC31C02AB7F00BCE220 /* CoolGameAlertKit.m */,
+				E8C0BEA51C09ABBA00BCE220 /* LoadingViewKit.h */,
+				E8C0BEA61C09ABBA00BCE220 /* LoadingViewKit.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -264,18 +264,18 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8C0BEA71C09ABBA00BCE220 /* LoadingViewKit.h in Headers */,
 				E85A9BCA1C01535F00D091E0 /* CoolGameMacros.h in Headers */,
-				E8C0BDD51C030C0B00BCE220 /* HttpSyncKit.h in Headers */,
 				E85A9BCB1C01536700D091E0 /* CoolGame.h in Headers */,
 				E8F1FC511C01747900BD5BE3 /* CoolGameInitKit.h in Headers */,
 				E8C0BDC41C02AB7F00BCE220 /* CoolGameAlertKit.h in Headers */,
 				E85A9BDB1C015F5100D091E0 /* LogKit.h in Headers */,
-				E8C0BDD91C030C2000BCE220 /* HttpAsynKit.h in Headers */,
 				E85A9BD21C01573C00D091E0 /* CoreKit.h in Headers */,
 				E8C0BDB91C0211B300BCE220 /* CoolGameLoginKit.h in Headers */,
 				E85A9BD91C01592600D091E0 /* CoolGameLog.h in Headers */,
 				E85A9BE11C016B6C00D091E0 /* CoolGameDelegate.h in Headers */,
 				E85A9BD51C0157B900D091E0 /* CoolGameConfig.h in Headers */,
+				E8C0BE9F1C0943A900BCE220 /* HttpKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,11 +406,11 @@
 			files = (
 				E8F1FC551C017C9A00BD5BE3 /* Kits.m in Sources */,
 				E85A9BD61C0157B900D091E0 /* CoolGameConfig.m in Sources */,
+				E8C0BEA81C09ABBA00BCE220 /* LoadingViewKit.m in Sources */,
 				E85A9B991C0151D600D091E0 /* CoolGame.m in Sources */,
-				E8C0BDDA1C030C2000BCE220 /* HttpAsynKit.m in Sources */,
+				E8C0BEA01C0943AA00BCE220 /* HttpKit.m in Sources */,
 				E8C0BDBA1C0211B300BCE220 /* CoolGameLoginKit.m in Sources */,
 				E85A9BDA1C01592600D091E0 /* CoolGameLog.m in Sources */,
-				E8C0BDD61C030C0B00BCE220 /* HttpSyncKit.m in Sources */,
 				E8F1FC521C01747900BD5BE3 /* CoolGameInitKit.m in Sources */,
 				E8C0BDC51C02AB7F00BCE220 /* CoolGameAlertKit.m in Sources */,
 			);
@@ -625,6 +625,7 @@
 				E8C0BDA21C018ADF00BCE220 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E8C0BDAE1C018EC700BCE220 /* Build configuration list for PBXNativeTarget "CoolGameIOSDKResources" */ = {
 			isa = XCConfigurationList;
@@ -633,6 +634,7 @@
 				E8C0BDB01C018EC700BCE220 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

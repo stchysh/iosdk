@@ -52,6 +52,7 @@
                     <connections>
                         <outlet property="_viewContainer" destination="8bC-Xf-vdC" id="cmG-KI-urI"/>
                         <outlet property="txt_userName" destination="ut4-dc-HJg" id="JHh-6U-n8K"/>
+                        <outlet property="txtpwd" destination="OU3-tS-P7m" id="D4I-M8-jRc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

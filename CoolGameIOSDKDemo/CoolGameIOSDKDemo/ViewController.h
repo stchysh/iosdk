@@ -14,5 +14,8 @@
 @property (strong, nonatomic) IBOutlet UIView *_viewContainer;
 @property (weak, nonatomic) IBOutlet UITextField *txt_userName;
 
+@property (weak, nonatomic) IBOutlet UITextField *txtpwd;
+@property UIAlertView * myAlert;
+@property UIActivityIndicatorView *activityView;
 @end
 

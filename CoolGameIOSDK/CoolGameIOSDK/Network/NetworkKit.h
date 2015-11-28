@@ -9,7 +9,6 @@
 #ifndef NetworkKit_h
 #define NetworkKit_h
 
-#import <Network/HttpSyncKit.h>
-#import <Network/HttpAsynKit.h>
+#import <Network/HttpKit.h>
 
 #endif /* NetworkKit_h */
