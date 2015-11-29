@@ -22,5 +22,6 @@
 +(void)logInit:(NSString*)msg;
 +(void)logConfig:(NSString*)msg;
 +(void)logLogin:(NSString*)msg;
++(void)logGameCenter:(NSString*)msg;
 
 @end

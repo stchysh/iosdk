@@ -44,8 +44,6 @@
 		E8C0BEA01C0943AA00BCE220 /* HttpKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C0BE9E1C0943A900BCE220 /* HttpKit.m */; };
 		E8C0BEA71C09ABBA00BCE220 /* LoadingViewKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E8C0BEA51C09ABBA00BCE220 /* LoadingViewKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E8C0BEA81C09ABBA00BCE220 /* LoadingViewKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C0BEA61C09ABBA00BCE220 /* LoadingViewKit.m */; };
-		E8C0BEAB1C0A79E600BCE220 /* GameCenterKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E8C0BEA91C0A79E600BCE220 /* GameCenterKit.h */; };
-		E8C0BEAC1C0A79E600BCE220 /* GameCenterKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C0BEAA1C0A79E600BCE220 /* GameCenterKit.m */; };
 		E8C0BEAF1C0A806C00BCE220 /* SdksKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E8C0BEAE1C0A806C00BCE220 /* SdksKit.h */; };
 		E8C0BEB21C0A80DC00BCE220 /* BaseSdk.h in Headers */ = {isa = PBXBuildFile; fileRef = E8C0BEB01C0A80DC00BCE220 /* BaseSdk.h */; };
 		E8C0BEB31C0A80DC00BCE220 /* BaseSdk.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C0BEB11C0A80DC00BCE220 /* BaseSdk.m */; };
@@ -112,8 +110,6 @@
 		E8C0BE9E1C0943A900BCE220 /* HttpKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpKit.m; sourceTree = "<group>"; };
 		E8C0BEA51C09ABBA00BCE220 /* LoadingViewKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingViewKit.h; sourceTree = "<group>"; };
 		E8C0BEA61C09ABBA00BCE220 /* LoadingViewKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingViewKit.m; sourceTree = "<group>"; };
-		E8C0BEA91C0A79E600BCE220 /* GameCenterKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCenterKit.h; sourceTree = "<group>"; };
-		E8C0BEAA1C0A79E600BCE220 /* GameCenterKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCenterKit.m; sourceTree = "<group>"; };
 		E8C0BEAE1C0A806C00BCE220 /* SdksKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SdksKit.h; sourceTree = "<group>"; };
 		E8C0BEB01C0A80DC00BCE220 /* BaseSdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseSdk.h; sourceTree = "<group>"; };
 		E8C0BEB11C0A80DC00BCE220 /* BaseSdk.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseSdk.m; sourceTree = "<group>"; };
@@ -236,8 +232,6 @@
 				E8C0BDC31C02AB7F00BCE220 /* CoolGameAlertKit.m */,
 				E8C0BEA51C09ABBA00BCE220 /* LoadingViewKit.h */,
 				E8C0BEA61C09ABBA00BCE220 /* LoadingViewKit.m */,
-				E8C0BEA91C0A79E600BCE220 /* GameCenterKit.h */,
-				E8C0BEAA1C0A79E600BCE220 /* GameCenterKit.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -291,7 +285,6 @@
 				E85A9BE11C016B6C00D091E0 /* CoolGameDelegate.h in Headers */,
 				E85A9BD51C0157B900D091E0 /* CoolGameConfig.h in Headers */,
 				E8C0BE9F1C0943A900BCE220 /* HttpKit.h in Headers */,
-				E8C0BEAB1C0A79E600BCE220 /* GameCenterKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,7 +416,6 @@
 				E8F1FC551C017C9A00BD5BE3 /* Kits.m in Sources */,
 				E85A9BD61C0157B900D091E0 /* CoolGameConfig.m in Sources */,
 				E8C0BEA81C09ABBA00BCE220 /* LoadingViewKit.m in Sources */,
-				E8C0BEAC1C0A79E600BCE220 /* GameCenterKit.m in Sources */,
 				E85A9B991C0151D600D091E0 /* CoolGame.m in Sources */,
 				E8C0BEB31C0A80DC00BCE220 /* BaseSdk.m in Sources */,
 				E8C0BEA01C0943AA00BCE220 /* HttpKit.m in Sources */,

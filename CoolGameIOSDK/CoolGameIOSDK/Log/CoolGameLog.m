@@ -37,6 +37,10 @@ static bool _isShowLog = false;
     [self log:LOG_LOGIN_TAG message:msg];
 }
 
++(void)logGameCenter:(NSString*)msg {
+    [self log:LOG_GAMECENTER_TAG message:msg];
+}
+
 +(void) log:(NSString *)tag message:(NSString *)msg {
     if([self isShowLog]) {
         NSLog(@"#iosdk %@ %@", tag, msg);

@@ -13,14 +13,18 @@
 
 @protocol CoolGameDelegate<NSObject>
 
-@required
 
-//init callback
+#pragma init callback
+@required
 -(void) initSuccess:(BOOL)result;
 
-//login callback
+#pragma login callback
+@required
 -(void) loginSuccess:(BOOL)result alias:(NSString*)alias playerId:(NSString*)playerId displayName:(NSString*)displayName;
 
+#pragma usercenter
+@required
+-(void) userCenterClose;
 
 @end
 

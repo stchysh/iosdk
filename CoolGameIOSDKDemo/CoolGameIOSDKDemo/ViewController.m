@@ -20,6 +20,10 @@
     [CoolGame init:self setAppId:@"10001" setAppKey:@"ABCDEFGHIJKLMN"];
     
 }
+- (IBAction)btnUserCenterHandler:(id)sender {
+    [CoolGame userCenter];
+}
+
 - (IBAction)btnLoginHandler:(id)sender {
     [CoolGame login];
 //    
@@ -48,6 +52,12 @@
     self.txtpwd.text = playerId;
     NSLog(@"#login success:%d, alias:%@, playerId:%@, displayName:%@", result, alias, playerId, displayName);
     [self.myAlert dismissWithClickedButtonIndex:0 animated:YES];
+    
+    self.btnUserCenter.hidden = NO;
+}
+
+-(void) userCenterClose {
+    NSLog(@"#user Center Close in view");
 }
 
 - (void)didReceiveMemoryWarning {

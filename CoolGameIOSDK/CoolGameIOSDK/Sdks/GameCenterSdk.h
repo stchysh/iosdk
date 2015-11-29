@@ -8,11 +8,12 @@
 
 #import <Sdks/BaseSdk.h>
 #import <GameKit/GameKit.h>
+#import <CoolGameDelegate.h>
 #import <Kits.h>
 
 @class BaseSdk;
 
-@interface GameCenterSdk : BaseSdk
+@interface GameCenterSdk : BaseSdk<GKAchievementViewControllerDelegate>
 
 
 -(void) loginSuccess:(BOOL)result alias:(NSString*)alias playerId:(NSString*)playerId displayName:(NSString*)displayName;

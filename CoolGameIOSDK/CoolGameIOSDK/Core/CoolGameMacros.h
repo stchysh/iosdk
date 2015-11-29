@@ -21,6 +21,7 @@
 #define LOG_INIT_TAG @"CoolGameInit"
 #define LOG_CONFIG_TAG @"CoolGameConfig"
 #define LOG_LOGIN_TAG @"CoolGameLogin"
+#define LOG_GAMECENTER_TAG @"CoolGameCenter"
 
 
 #endif /* CoolGameMacros_h */

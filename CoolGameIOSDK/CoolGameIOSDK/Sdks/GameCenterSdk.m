@@ -10,9 +10,38 @@
 
 @implementation GameCenterSdk
 
+#pragma user center 
 
+-(void)showUserCenter {
+    [CoolGameLog logGameCenter:@"showUserCenter"];
+    if([self isGameCenterAvailable]) {
+        
+        GKAchievementViewController *achievementController = [[GKAchievementViewController alloc] init];
+        if (achievementController != nil) {
+            achievementController.achievementDelegate = self;
+            
+//            UIWindow *window = [[UIApplication sharedApplication] keyWindow];
+//            currentModalViewController = [[UIViewController alloc] init];
+//            [window addSubview:currentModalViewController.view];
+//            [currentModalViewController presentModalViewController:achievementController animated:YES];
+            [[Kits viewController] presentViewController:achievementController animated:YES completion:nil];
+        }
+    }
+}
 
-#pragma login
+// The achievement view has finished
+- (void)achievementViewControllerDidFinish:(GKAchievementViewController *)viewController {
+    [CoolGameLog logGameCenter:@"Achievement View is Closed"];
+    if(viewController !=nil){
+        [viewController dismissViewControllerAnimated:NO completion:^(void){
+            [[Kits delegate] userCenterClose];
+        }];
+        [viewController.view removeFromSuperview];
+        viewController = nil;
+    }
+}
+
+#pragma login -----------------------------------------
 
 -(void)doLogin {
     [Kits showLoading:@"Logining..."];

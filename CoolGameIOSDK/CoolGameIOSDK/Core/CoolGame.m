@@ -21,9 +21,9 @@ static UIViewController * _viewController;
     [CoolGameLog setIsShowLog:isShowLog];
 }
 
-+(void) setViewContainer:(UIView *)container {
-
-}
+//+(void) setViewContainer:(UIView *)container {
+//
+//}
 
 +(void) setViewController:(UIViewController *)viewController {
     [Kits assert:(viewController!=nil) message:@"viewController cannot be nil."];
@@ -48,5 +48,10 @@ static UIViewController * _viewController;
     [[Kits sdk] doLogin];
 }
 
+#pragma usercenter ----------------------------------------
+
++(void) userCenter {
+    [[Kits sdk] showUserCenter];
+}
 
 @end
