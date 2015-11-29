@@ -23,5 +23,19 @@
 #define LOG_LOGIN_TAG @"CoolGameLogin"
 #define LOG_GAMECENTER_TAG @"CoolGameCenter"
 
+#pragma network
+#define HTTPKIT_GET @"GET"
+#define HTTPKIT_POST @"POST"
+#define HTTPKIT_DATA @"HTTPKIT_DATA"
+
+#define HTTPKIT_TIMEOUT @"HTTPKIT_TIMEOUT"
+#define HTTPKIT_CACHEPOLICY @"HTTPKIT_CACHEPOLICY"
+#define HTTPKIT_TRYCOUNT @"HTTPKIT_TRYCOUNT"
+
+
+#pragma base sdk
+#define GAMECENTER_REPORTSCORE 1
+#define GAMECENTER_REPORTACHIEVEMENT 2
+#define GAMECENTER_UNLOCKACHIEVEMENT 3
 
 #endif /* CoolGameMacros_h */

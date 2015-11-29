@@ -43,7 +43,7 @@
     [Kits hideLoading];
     [CoolGameLog logInit:@"CoolGameInitKit inited."];
     
-    [[Kits delegate] initSuccess:YES];
+    [[Kits delegate] onInitSuccess:YES];
     
 }
 

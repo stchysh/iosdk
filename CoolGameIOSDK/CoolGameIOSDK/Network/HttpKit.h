@@ -7,14 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-#define HTTPKIT_GET @"GET"
-#define HTTPKIT_POST @"POST"
-#define HTTPKIT_DATA @"HTTPKIT_DATA"
-
-#define HTTPKIT_TIMEOUT @"HTTPKIT_TIMEOUT"
-#define HTTPKIT_CACHEPOLICY @"HTTPKIT_CACHEPOLICY"
-#define HTTPKIT_TRYCOUNT @"HTTPKIT_TRYCOUNT"
+#import <Core/CoolGameMacros.h>
 
 @interface HttpKit : NSObject
 

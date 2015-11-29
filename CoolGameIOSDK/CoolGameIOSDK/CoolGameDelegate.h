@@ -16,15 +16,18 @@
 
 #pragma init callback
 @required
--(void) initSuccess:(BOOL)result;
+-(void) onInitSuccess:(BOOL)result;
 
 #pragma login callback
 @required
--(void) loginSuccess:(BOOL)result alias:(NSString*)alias playerId:(NSString*)playerId displayName:(NSString*)displayName;
+-(void) onLoginSuccess:(BOOL)result alias:(NSString*)alias playerId:(NSString*)playerId displayName:(NSString*)displayName;
+
+@required
+-(void) onLogout;
 
 #pragma usercenter
 @required
--(void) userCenterClose;
+-(void) onUserCenterClosed;
 
 @end
 

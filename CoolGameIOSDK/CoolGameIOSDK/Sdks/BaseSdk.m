@@ -21,4 +21,8 @@
     
 }
 
+-(void)sendData:(NSArray*) params {
+    
+}
+
 @end

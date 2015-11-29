@@ -14,4 +14,6 @@
 -(void)doLogout;
 -(void)showUserCenter;
 
+-(void)sendData:(NSArray*) params setCallback:(void (^)(NSObject*))callback;
+
 @end

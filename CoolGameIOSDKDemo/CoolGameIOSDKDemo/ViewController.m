@@ -42,11 +42,11 @@
     
 }
 
--(void) initSuccess:(BOOL)result {
+-(void) onInitSuccess:(BOOL)result {
     NSLog(@"#initSuccess, %d", result);
 }
 
--(void) loginSuccess:(BOOL)result alias:(NSString*)alias playerId:(NSString*)playerId displayName:(NSString*)displayName {
+-(void) onLoginSuccess:(BOOL)result alias:(NSString*)alias playerId:(NSString*)playerId displayName:(NSString*)displayName {
     NSString * name = [NSString stringWithFormat:@"%@, %@", alias, displayName];
     self.txt_userName.text = name;
     self.txtpwd.text = playerId;
@@ -56,7 +56,11 @@
     self.btnUserCenter.hidden = NO;
 }
 
--(void) userCenterClose {
+-(void) onLogout {
+    
+}
+
+-(void) onUserCenterClosed {
     NSLog(@"#user Center Close in view");
 }
 
