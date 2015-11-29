@@ -10,9 +10,9 @@
 
 @implementation CoolGameAlertKit
 
--(void)setup:(UIViewController*)viewController {
-    self._viewController = viewController;
-}
+//-(void)setup:(UIViewController*)viewController {
+//    self._viewController = viewController;
+//}
 
 -(void)alert:(NSString*)msg {
     [self alert:msg setTitle:nil completeHandler:nil];
@@ -33,7 +33,8 @@
     }];
     [alert addAction:alertAction];
     
-    [self._viewController presentViewController:alert animated:YES completion:nil];
+    [[Kits viewController] presentViewController:alert animated:YES completion:nil];
+//    [self._viewController presentViewController:alert animated:YES completion:nil];
     
     
 }

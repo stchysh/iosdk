@@ -11,9 +11,9 @@
 
 @interface CoolGameAlertKit : NSObject
 
-@property (nonatomic, strong) UIViewController* _viewController;
+//@property (nonatomic, strong) UIViewController* _viewController;
 
--(void)setup:(UIViewController*)viewController;
+//-(void)setup:(UIViewController*)viewController;
 
 -(void)alert:(NSString*)msg;
 -(void)alert:(NSString*)msg setTitle:(NSString*)title;

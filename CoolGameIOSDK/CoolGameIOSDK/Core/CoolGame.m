@@ -29,21 +29,23 @@ static UIViewController * _viewController;
     [Kits assert:(viewController!=nil) message:@"viewController cannot be nil."];
     [Kits setUIViewController:viewController];
     _viewController = viewController;
-    [[Kits alert] setup:_viewController];
+//    [[Kits alert] setup:_viewController];
 }
 
 #pragma init -----------------------------------------
 +(void) init:(id<CoolGameDelegate>)delegate setAppId:(NSString*) appId setAppKey:(NSString*) appKey {
     [Kits assert:(delegate!=nil) message:@"delegate cannot be nil."];
     [CoolGameLog log:@"coolgame sdk initing"];
+    [Kits setDelegate:delegate];
     _delegate = delegate;
     CoolGameInitKit *initKit = [CoolGameInitKit new];
-    [initKit setup:delegate setAppId:appId setAppKey:appKey];
+    [initKit setup:appId setAppKey:appKey];
 }
 
 #pragma login ----------------------------------------
 +(void) login {
-    [[CoolGameLoginKit new] setup:_delegate];
+//    [[CoolGameLoginKit new] setup];
+    [[Kits sdk] doLogin];
 }
 
 

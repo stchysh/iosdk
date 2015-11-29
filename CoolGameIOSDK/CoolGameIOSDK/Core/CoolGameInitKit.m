@@ -12,10 +12,10 @@
 
 //配置初始化
 //更新检测？
--(void)setup:(id<CoolGameDelegate>)delegate setAppId:(NSString*)appId setAppKey:(NSString*)appKey {
+-(void)setup:(NSString*)appId setAppKey:(NSString*)appKey {
     [Kits showLoading:@"initing..."];
     [CoolGameLog logInit:@"CoolGameInitKit setup."];
-    self._delegate = delegate;
+//    self._delegate = delegate;
     [[Kits config] setAppId:appId setAppKey:appKey completeHandler:^(void) {
         [self checkUpdate];
     }];
@@ -33,6 +33,9 @@
 -(void)startInit {
     [CoolGameLog logInit:@"CoolGameInitKit initing."];
     
+    BaseSdk * sdk = [[GameCenterSdk alloc] init];
+    [Kits setSDK:sdk];
+    
     [self initSuccess];
 }
 
@@ -40,7 +43,8 @@
     [Kits hideLoading];
     [CoolGameLog logInit:@"CoolGameInitKit inited."];
     
-    [self._delegate initSuccess:YES];
+    [[Kits delegate] initSuccess:YES];
+    
 }
 
 

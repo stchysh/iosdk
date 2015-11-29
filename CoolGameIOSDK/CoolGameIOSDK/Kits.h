@@ -12,17 +12,25 @@
 #import <UIKit/UIKit.h>
 #import <Core/CoreKit.h>
 #import <Log/LogKit.h>
-#import <Login/LoginKit.h>
 #import <Utils/UtilsKit.h>
 #import <Network/NetworkKit.h>
+#import <Sdks/SdksKit.h>
 
-@class CoolGameConfig, CoolGameAlertKit, HttpSyncKit;
+@class CoolGameConfig, CoolGameAlertKit, HttpSyncKit, BaseSdk;
 
 @interface Kits : NSObject
 
 +(CoolGameConfig*) config;
 +(CoolGameAlertKit*) alert;
++(UIViewController*) viewController;
 
+//@property id<CoolGameDelegate> _delegate;
++(id<CoolGameDelegate>) delegate;
++(void)setDelegate:(id<CoolGameDelegate>)delegate;
+
+#pragma sdk
++(BaseSdk*) sdk;
++(void) setSDK:(BaseSdk*)sdk;
 
 +(void)assert:(BOOL)val message:(NSString*)msg;
 +(void)get:(NSString*)urlPath completionHandler:(void (^)(NSString*))handler;

@@ -16,9 +16,15 @@
 static CoolGameConfig * _config;
 static CoolGameAlertKit * _alert;
 static UIViewController * _viewController;
+static id<CoolGameDelegate> _delegate;
+static BaseSdk * _sdk;
 
 +(void)setUIViewController:(UIViewController*)viewController {
     _viewController = viewController;
+}
+
++(UIViewController*) viewController {
+    return _viewController;
 }
 
 +(CoolGameConfig*) config {
@@ -33,6 +39,23 @@ static UIViewController * _viewController;
         _alert = [CoolGameAlertKit new];
     }
     return _alert;
+}
+
+#pragma delegate
+
++(id<CoolGameDelegate>) delegate {
+    return _delegate;
+}
++(void)setDelegate:(id<CoolGameDelegate>)delegate {
+    _delegate = delegate;
+}
+
+#pragma sdk
++(BaseSdk*) sdk {
+    return _sdk;
+}
++(void) setSDK:(BaseSdk*)sdk {
+    _sdk = sdk;
 }
 
 #pragma assert

@@ -1,23 +1,27 @@
 //
-//  CoolGameLoginKit.m
+//  GameCenterSdk.m
 //  CoolGameIOSDK
 //
-//  Created by LinKunxin on 15/11/22.
+//  Created by LinKunxin on 15/11/29.
 //  Copyright © 2015年 kuyou. All rights reserved.
 //
 
-#import "CoolGameLoginKit.h"
+#import "GameCenterSdk.h"
 
-@implementation CoolGameLoginKit
+@implementation GameCenterSdk
 
--(void) setup:(id<CoolGameDelegate>)delegate {
+
+
+#pragma login
+
+-(void)doLogin {
     [Kits showLoading:@"Logining..."];
     [CoolGameLog logLogin:@"CoolGameLoginKit setup"];
-    self._delegate = delegate;
-
+    //    self._delegate = delegate;
+    
     if([self isGameCenterAvailable]) {
         [self loginGameCenter];
-//        [self loginSuccess];
+        //        [self loginSuccess];
     }
     else {
         [Kits hideLoading];
@@ -28,7 +32,7 @@
 -(void) loginSuccess:(BOOL)result alias:(NSString*)alias playerId:(NSString*)playerId displayName:(NSString*)displayName {
     [Kits hideLoading];
     [CoolGameLog logLogin:@"CoolGameLoginKit loginSuccess"];
-    [self._delegate loginSuccess:result alias:alias playerId:playerId displayName:displayName];
+    [[Kits delegate] loginSuccess:result alias:alias playerId:playerId displayName:displayName];
 }
 
 -(BOOL) isGameCenterAvailable {
@@ -83,27 +87,27 @@
             }
         };
     }
-
+    
 }
 
 //-(void)verifyPlayer:(NSString *)playerID publicKeyUrl:(NSURL *)publicKeyUrl signature:(NSData *)signature salt:(NSData *)salt timestamp:(uint64_t)timestamp
 //{
 //    //get certificate
 //    NSData *certificateData = [NSData dataWithContentsOfURL:publicKeyUrl];
-//    
+//
 //    //build payload
 //    NSMutableData *payload = [[NSMutableData alloc] init];
 //    [payload appendData:[playerID dataUsingEncoding:NSASCIIStringEncoding]];
 //    [payload appendData:[[[NSBundle mainBundle] bundleIdentifier] dataUsingEncoding:NSASCIIStringEncoding]];
-//    
+//
 //    uint64_t timestampBE = CFSwapInt64HostToBig(timestamp);
 //    [payload appendBytes:&timestampBE length:sizeof(timestampBE)];
 //    [payload appendData:salt];
-//    
+//
 //    //sign
 //    SecCertificateRef certificateFromFile = SecCertificateCreateWithData(NULL, (__bridge CFDataRef)certificateData); // load the certificate
 //    SecPolicyRef secPolicy = SecPolicyCreateBasicX509();
-//    
+//
 //    SecTrustRef trust;
 //    OSStatus statusTrust = SecTrustCreateWithCertificates( certificateFromFile, secPolicy, &trust);
 //    if(statusTrust != errSecSuccess)
@@ -111,7 +115,7 @@
 //        NSLog(@"could not create trust");
 //        return;
 //    }
-//    
+//
 //    SecTrustResultType resultType;
 //    OSStatus statusTrustEval =  SecTrustEvaluate(trust, &resultType);
 //    if(statusTrustEval != errSecSuccess)
@@ -119,20 +123,20 @@
 //        NSLog(@"could not evaluate trust");
 //        return;
 //    }
-//    
+//
 //    if(resultType != kSecTrustResultProceed && resultType != kSecTrustResultRecoverableTrustFailure)
 //    {
 //        NSLog(@"server can not be trusted");
 //        return;
 //    }
-//    
+//
 //    SecKeyRef publicKey = SecTrustCopyPublicKey(trust);
 //    uint8_t sha1HashDigest[CC_SHA1_DIGEST_LENGTH];
 //    CC_SHA1([payload bytes], [payload length], sha1HashDigest);
-//    
+//
 //    //check to see if its a match
 //    OSStatus verficationResult = SecKeyRawVerify(publicKey,  kSecPaddingPKCS1SHA1, sha1HashDigest, CC_SHA1_DIGEST_LENGTH, [signature bytes], [signature length]);
-//    
+//
 //    CFRelease(publicKey);
 //    CFRelease(trust);
 //    CFRelease(secPolicy);
@@ -146,5 +150,8 @@
 //        NSLog(@"Danger!!!");
 //    }
 //}
+
+
+
 
 @end

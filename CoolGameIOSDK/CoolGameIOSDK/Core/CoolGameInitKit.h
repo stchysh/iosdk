@@ -12,9 +12,7 @@
 
 @interface CoolGameInitKit : NSObject
 
-@property id<CoolGameDelegate> _delegate;
-
--(void)setup:(id<CoolGameDelegate>)delegate setAppId:(NSString*)appId setAppKey:(NSString*)appKey;
+-(void)setup:(NSString*)appId setAppKey:(NSString*)appKey;
 -(void)startInit;
 -(void)checkUpdate;
 -(void)initSuccess;

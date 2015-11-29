@@ -1,20 +1,19 @@
 //
-//  CoolGameLoginKit.h
+//  GameCenterSdk.h
 //  CoolGameIOSDK
 //
-//  Created by LinKunxin on 15/11/22.
+//  Created by LinKunxin on 15/11/29.
 //  Copyright © 2015年 kuyou. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <Sdks/BaseSdk.h>
 #import <GameKit/GameKit.h>
 #import <Kits.h>
 
-@interface CoolGameLoginKit : NSObject
+@class BaseSdk;
 
-@property id<CoolGameDelegate> _delegate;
+@interface GameCenterSdk : BaseSdk
 
--(void) setup:(id<CoolGameDelegate>)delegate;
 
 -(void) loginSuccess:(BOOL)result alias:(NSString*)alias playerId:(NSString*)playerId displayName:(NSString*)displayName;
 
