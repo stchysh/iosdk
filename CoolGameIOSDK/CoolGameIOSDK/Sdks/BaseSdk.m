@@ -24,5 +24,5 @@
 -(void)sendData:(NSArray*) params {
     
 }
-
+-(void)sendData:(NSArray*) params setCallback:(void (^)(NSObject*))callback {}
 @end

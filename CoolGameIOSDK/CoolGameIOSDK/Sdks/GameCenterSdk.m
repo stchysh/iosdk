@@ -17,7 +17,7 @@
     self = [super init];
     if (self) {
         if([self isGameCenterAvailable]) {
-            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(authenticateHandler) name:GKPlayerAuthenticationDidChangeNotificationName object:nil];
+            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(authenticationChanged) name:GKPlayerAuthenticationDidChangeNotificationName object:nil];
         }
     }
     return self;
@@ -73,6 +73,7 @@
                     int64_t score = [params[1] intValue];
                     NSString * category = params[2];
                     GKScore * scoreReporter = [[GKScore alloc] initWithCategory:category];
+                    scoreReporter.value = score;
                     [scoreReporter reportScoreWithCompletionHandler:^(NSError * error){
                         if(nil != error) {
                             [CoolGameLog logGameCenter:[NSString stringWithFormat:@"sendData:%d, score:%lld, category:%@, err:%@", func, score, category, error]];

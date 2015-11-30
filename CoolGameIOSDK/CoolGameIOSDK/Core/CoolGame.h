@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <CoolGameIOSDK/CoolGameDelegate.h>
+#import <CoolGameIOSDK/CoolGameMacros.h>
 
 @interface CoolGame : NSObject
 
@@ -26,5 +27,8 @@
 
 #pragma usercenter
 +(void) userCenter;
+
+#pragma send data
++(void) sendData:(NSArray*)data setCallback:(void (^)(NSObject*))callback;
 
 @end

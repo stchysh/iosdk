@@ -24,7 +24,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzC-Wg-uaA">
-                                <rect key="frame" x="272" y="232" width="46" height="30"/>
+                                <rect key="frame" x="534" y="232" width="46" height="30"/>
                                 <state key="normal" title="登录"/>
                                 <connections>
                                     <action selector="btnLoginHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rds-Ja-hMO"/>
@@ -38,17 +38,33 @@
                                     <action selector="txt_userName:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="0im-r8-qBq"/>
                                 </connections>
                             </textField>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qlt-Hw-fTZ">
-                                <rect key="frame" x="219" y="232" width="45" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qlt-Hw-fTZ">
+                                <rect key="frame" x="481" y="232" width="45" height="30"/>
                                 <state key="normal" title="排行榜"/>
                                 <connections>
                                     <action selector="btnUserCenterHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FWF-Cm-e97"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2S-Fq-oP9">
+                                <rect key="frame" x="413" y="232" width="60" height="30"/>
+                                <state key="normal" title="上传成就"/>
+                                <connections>
+                                    <action selector="btnUploadAchievement:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TM0-ev-axh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ba-DH-mic">
+                                <rect key="frame" x="345" y="232" width="60" height="30"/>
+                                <state key="normal" title="上传排行"/>
+                                <connections>
+                                    <action selector="btnUploadBoardHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dpn-p5-H28"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="hzC-Wg-uaA" firstAttribute="leading" secondItem="Qlt-Hw-fTZ" secondAttribute="trailing" constant="8" id="1Yh-VU-Rhi"/>
+                            <constraint firstItem="f2S-Fq-oP9" firstAttribute="leading" secondItem="7ba-DH-mic" secondAttribute="trailing" constant="8" id="A9a-vr-sAX"/>
+                            <constraint firstItem="Qlt-Hw-fTZ" firstAttribute="leading" secondItem="f2S-Fq-oP9" secondAttribute="trailing" constant="8" id="Pph-Lx-T4B"/>
                             <constraint firstAttribute="trailingMargin" secondItem="OU3-tS-P7m" secondAttribute="trailing" id="QZa-rB-fdt"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hzC-Wg-uaA" secondAttribute="trailing" id="b9V-qJ-x10"/>
                             <constraint firstItem="OU3-tS-P7m" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="gwX-EX-8QW"/>

@@ -374,6 +374,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kuyou.CoolGameIOSDKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "fe5d8478-5209-473d-b7d0-0144750cad0f";
 			};
 			name = Release;
 		};

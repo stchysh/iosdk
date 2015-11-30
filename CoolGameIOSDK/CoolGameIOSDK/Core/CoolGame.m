@@ -54,4 +54,9 @@ static UIViewController * _viewController;
     [[Kits sdk] showUserCenter];
 }
 
+#pragma send data
++(void) sendData:(NSArray*)data setCallback:(void (^)(NSObject*))callback {
+    [[Kits sdk] sendData:data setCallback:callback];
+}
+
 @end

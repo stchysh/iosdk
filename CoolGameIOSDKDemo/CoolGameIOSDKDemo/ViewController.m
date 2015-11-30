@@ -41,6 +41,14 @@
 
     
 }
+- (IBAction)btnUploadAchievement:(id)sender {
+    NSString * func = [NSString stringWithFormat:@"%d", GAMECENTER_REPORTSCORE];
+    [CoolGame sendData:[NSArray arrayWithObjects:func, @"100", @"mode_1", nil] setCallback:nil];
+}
+- (IBAction)btnUploadBoardHandler:(id)sender {
+    NSString * func = [NSString stringWithFormat:@"%d", GAMECENTER_REPORTACHIEVEMENT];
+    [CoolGame sendData:[NSArray arrayWithObjects:func, @"bbb_1", @"100", nil] setCallback:nil];
+}
 
 -(void) onInitSuccess:(BOOL)result {
     NSLog(@"#initSuccess, %d", result);
