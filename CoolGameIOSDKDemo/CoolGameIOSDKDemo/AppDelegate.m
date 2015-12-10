@@ -7,17 +7,42 @@
 //
 
 #import "AppDelegate.h"
+#import "3rdsdk/mta/MTA.h"
+#import "3rdsdk/mta/MTAConfig.h"
+
 
 @interface AppDelegate ()
 
 @end
+
+#define MTA_APPKEY @"I4UPQ8A9P5DB"
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [MTA startWithAppkey:MTA_APPKEY];
+    
     return YES;
+}
+/**
+ * @desc 获取附近的人的数据
+ * @params data   获取的数据
+ * @params result 获取结果的状态
+ */
+- (void)nearbyNeighbors:(id)data result:(BOOL)result {
+    
+}
+
+/**
+ * @desc 位置查询
+ * @params data   获取数据的结果
+ * @params result 获取结果的状态
+ */
+- (void)queryLocations:(id)data result:(BOOL)result {
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

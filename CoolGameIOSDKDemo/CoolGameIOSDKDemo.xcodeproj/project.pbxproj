@@ -14,6 +14,12 @@
 		E85A9BB31C01528F00D091E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E85A9BB21C01528F00D091E0 /* Assets.xcassets */; };
 		E85A9BB61C01528F00D091E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E85A9BB41C01528F00D091E0 /* LaunchScreen.storyboard */; };
 		E85A9BCF1C0154BB00D091E0 /* libCoolGameIOSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E85A9BC81C0152CF00D091E0 /* libCoolGameIOSDK.a */; };
+		E88CB41E1C17053B0013EC4D /* libmtasdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E88CB41A1C17053B0013EC4D /* libmtasdk.a */; };
+		E88CB4211C1709B70013EC4D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E88CB4201C1709B70013EC4D /* libz.tbd */; };
+		E88CB4231C1709CD0013EC4D /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E88CB4221C1709CD0013EC4D /* libsqlite3.tbd */; };
+		E88CB4251C1709E30013EC4D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E88CB4241C1709E30013EC4D /* SystemConfiguration.framework */; };
+		E88CB4271C1709EC0013EC4D /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E88CB4261C1709EC0013EC4D /* CoreTelephony.framework */; };
+		E88CB4291C1709F50013EC4D /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E88CB4281C1709F50013EC4D /* AdSupport.framework */; };
 		E8C0BDC91C02BC4600BCE220 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8C0BDC81C02BC4500BCE220 /* GameKit.framework */; };
 		E8C0BDCB1C02C04800BCE220 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8C0BDCA1C02C04800BCE220 /* UIKit.framework */; };
 /* End PBXBuildFile section */
@@ -61,6 +67,15 @@
 		E85A9BB51C01528F00D091E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E85A9BB71C01528F00D091E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E85A9BC31C0152CF00D091E0 /* CoolGameIOSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CoolGameIOSDK.xcodeproj; path = ../CoolGameIOSDK/CoolGameIOSDK.xcodeproj; sourceTree = "<group>"; };
+		E88CB41A1C17053B0013EC4D /* libmtasdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmtasdk.a; sourceTree = "<group>"; };
+		E88CB41B1C17053B0013EC4D /* MTA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTA.h; sourceTree = "<group>"; };
+		E88CB41C1C17053B0013EC4D /* MTAConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAConfig.h; sourceTree = "<group>"; };
+		E88CB41D1C17053B0013EC4D /* MTAFeedback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAFeedback.h; sourceTree = "<group>"; };
+		E88CB4201C1709B70013EC4D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		E88CB4221C1709CD0013EC4D /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		E88CB4241C1709E30013EC4D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E88CB4261C1709EC0013EC4D /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		E88CB4281C1709F50013EC4D /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		E8C0BDC81C02BC4500BCE220 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		E8C0BDCA1C02C04800BCE220 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -70,7 +85,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E88CB4291C1709F50013EC4D /* AdSupport.framework in Frameworks */,
+				E88CB4271C1709EC0013EC4D /* CoreTelephony.framework in Frameworks */,
+				E88CB4251C1709E30013EC4D /* SystemConfiguration.framework in Frameworks */,
+				E88CB4231C1709CD0013EC4D /* libsqlite3.tbd in Frameworks */,
+				E88CB4211C1709B70013EC4D /* libz.tbd in Frameworks */,
 				E8C0BDCB1C02C04800BCE220 /* UIKit.framework in Frameworks */,
+				E88CB41E1C17053B0013EC4D /* libmtasdk.a in Frameworks */,
 				E8C0BDC91C02BC4600BCE220 /* GameKit.framework in Frameworks */,
 				E85A9BCF1C0154BB00D091E0 /* libCoolGameIOSDK.a in Frameworks */,
 			);
@@ -79,11 +100,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E80B53511C1963600016DE32 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E88CB4281C1709F50013EC4D /* AdSupport.framework */,
+				E88CB4261C1709EC0013EC4D /* CoreTelephony.framework */,
+				E88CB4241C1709E30013EC4D /* SystemConfiguration.framework */,
+				E88CB4221C1709CD0013EC4D /* libsqlite3.tbd */,
+				E88CB4201C1709B70013EC4D /* libz.tbd */,
+				E8C0BDCA1C02C04800BCE220 /* UIKit.framework */,
+				E8C0BDC81C02BC4500BCE220 /* GameKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E85A9B9A1C01528F00D091E0 = {
 			isa = PBXGroup;
 			children = (
-				E8C0BDCA1C02C04800BCE220 /* UIKit.framework */,
-				E8C0BDC81C02BC4500BCE220 /* GameKit.framework */,
+				E80B53511C1963600016DE32 /* Frameworks */,
 				E85A9BC31C0152CF00D091E0 /* CoolGameIOSDK.xcodeproj */,
 				E85A9BA51C01528F00D091E0 /* CoolGameIOSDKDemo */,
 				E85A9BA41C01528F00D091E0 /* Products */,
@@ -101,6 +135,7 @@
 		E85A9BA51C01528F00D091E0 /* CoolGameIOSDKDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E88CB4181C17053B0013EC4D /* 3rdsdk */,
 				E85A9BA91C01528F00D091E0 /* AppDelegate.h */,
 				E85A9BAA1C01528F00D091E0 /* AppDelegate.m */,
 				E85A9BAC1C01528F00D091E0 /* ViewController.h */,
@@ -129,6 +164,25 @@
 				E8C0BDBE1C021BA900BCE220 /* CoolGameIOSDK.bundle */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		E88CB4181C17053B0013EC4D /* 3rdsdk */ = {
+			isa = PBXGroup;
+			children = (
+				E88CB4191C17053B0013EC4D /* mta */,
+			);
+			path = 3rdsdk;
+			sourceTree = "<group>";
+		};
+		E88CB4191C17053B0013EC4D /* mta */ = {
+			isa = PBXGroup;
+			children = (
+				E88CB41A1C17053B0013EC4D /* libmtasdk.a */,
+				E88CB41B1C17053B0013EC4D /* MTA.h */,
+				E88CB41C1C17053B0013EC4D /* MTAConfig.h */,
+				E88CB41D1C17053B0013EC4D /* MTAFeedback.h */,
+			);
+			path = mta;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +219,11 @@
 					E85A9BA21C01528F00D091E0 = {
 						CreatedOnToolsVersion = 7.1.1;
 						DevelopmentTeam = W54UPLZLQ8;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -354,13 +413,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Kunxin Lin (86635LURN7)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/CoolGameIOSDKDemo/3rdsdk/mta";
 				INFOPLIST_FILE = CoolGameIOSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CoolGameIOSDKDemo/3rdsdk/mta",
+					"$(PROJECT_DIR)/CoolGameIOSDKDemo/3rdsdk/lbs",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kuyou.CoolGameIOSDKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c7b0c96d-3f73-43cb-9e6e-9fe38423ec56";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -369,12 +436,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/CoolGameIOSDKDemo/3rdsdk/mta";
 				INFOPLIST_FILE = CoolGameIOSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CoolGameIOSDKDemo/3rdsdk/mta",
+					"$(PROJECT_DIR)/CoolGameIOSDKDemo/3rdsdk/lbs",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kuyou.CoolGameIOSDKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "fe5d8478-5209-473d-b7d0-0144750cad0f";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
