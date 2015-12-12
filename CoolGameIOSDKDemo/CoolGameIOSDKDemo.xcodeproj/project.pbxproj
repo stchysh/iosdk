@@ -22,6 +22,7 @@
 		E88CB4291C1709F50013EC4D /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E88CB4281C1709F50013EC4D /* AdSupport.framework */; };
 		E8C0BDC91C02BC4600BCE220 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8C0BDC81C02BC4500BCE220 /* GameKit.framework */; };
 		E8C0BDCB1C02C04800BCE220 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8C0BDCA1C02C04800BCE220 /* UIKit.framework */; };
+		E8DB72A81C1BD82200348528 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8DB72A71C1BD82200348528 /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,8 @@
 		E88CB4281C1709F50013EC4D /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		E8C0BDC81C02BC4500BCE220 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		E8C0BDCA1C02C04800BCE220 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E8DB72A61C1BD82200348528 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		E8DB72A71C1BD82200348528 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +148,8 @@
 				E85A9BB41C01528F00D091E0 /* LaunchScreen.storyboard */,
 				E85A9BB71C01528F00D091E0 /* Info.plist */,
 				E85A9BA61C01528F00D091E0 /* Supporting Files */,
+				E8DB72A61C1BD82200348528 /* DetailViewController.h */,
+				E8DB72A71C1BD82200348528 /* DetailViewController.m */,
 			);
 			path = CoolGameIOSDKDemo;
 			sourceTree = "<group>";
@@ -289,6 +294,7 @@
 				E85A9BAE1C01528F00D091E0 /* ViewController.m in Sources */,
 				E85A9BAB1C01528F00D091E0 /* AppDelegate.m in Sources */,
 				E85A9BA81C01528F00D091E0 /* main.m in Sources */,
+				E8DB72A81C1BD82200348528 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

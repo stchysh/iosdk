@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "DetailViewController.h"
 
 @implementation ViewController
 
@@ -18,25 +19,6 @@
     [CoolGame setConfig:YES setIsShowLog:YES];
     
     [CoolGame init:self setAppId:@"10001" setAppKey:@"ABCDEFGHIJKLMN"];
-    
-}
-
-
-/**
- * @desc 获取附近的人的数据
- * @params data   获取的数据
- * @params result 获取结果的状态
- */
-- (void)nearbyNeighbors:(id)data result:(BOOL)result {
-    
-}
-
-/**
- * @desc 位置查询
- * @params data   获取数据的结果
- * @params result 获取结果的状态
- */
-- (void)queryLocations:(id)data result:(BOOL)result {
     
 }
 
@@ -83,10 +65,14 @@
     [self.myAlert dismissWithClickedButtonIndex:0 animated:YES];
     
     self.btnUserCenter.hidden = NO;
+    
+    DetailViewController * detail = [DetailViewController new];
+    [self.navigationController pushViewController:detail animated:YES];
+//    [self presentViewController:detail animated:NO completion:nil];
 }
 
 -(void) onLogout {
-    
+
 }
 
 -(void) onUserCenterClosed {
